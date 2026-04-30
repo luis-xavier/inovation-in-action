@@ -1,0 +1,255 @@
+---
+const email = await Astro.session?.get('userEmail');
+const nombre = await Astro.session?.get('userName');
+const apellido = await Astro.session?.get('userLastName');
+const enterprise = await Astro.session?.get('enterprise');
+---
+<section class="grid md:grid-cols-2 gap-10 md:gap-0">
+  <div class="back-premios py-6 md:px-10 pr-[40%] pl-4 md:h-auto h-40 md:block flex flex-col justify-center">
+    <h2 class="text-white md:text-5xl text-3xl">Sección de Registro</h2>
+  </div>
+  <div class="w-[92%] mx-auto">
+    <p>Nos complace contar con su presencia:</p>
+    <form id="registro" class="flex flex-col gap-6 items-center w-full">
+      <div id="assistance_q" class="flex gap-6 mt-5 w-full" id="restricciones_user">
+        <div>
+          <label for="assistance_si" class="text-lg">Asistiré</label>
+          <input type="radio" name="assistance" id="assistance_si" value="true" required>
+        </div>
+        <div>
+          <label for="assistance_no" class="text-lg">No me es posible asistir</label>
+          <input type="radio" name="assistance" id="assistance_no" value="false" required>
+        </div>
+      </div>
+      
+      {nombre
+      ? <div class="flex flex-col w-full">
+          <label for="name" class="text-lg">Nombre:</label>
+          <input type="text" required name="name" id="name" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]" value={nombre}>
+        </div>
+      : <div class="flex flex-col w-full">
+          <label for="name" class="text-lg">Nombre:</label>
+          <input type="text" required name="name" id="name" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]">
+        </div>
+      }
+      {apellido
+      ? <div class="flex flex-col w-full">
+          <label for="lastname" class="text-lg">Apellido:</label>
+          <input type="text" required name="lastname" id="lastname" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]" value={apellido}>
+        </div>
+      : <div class="flex flex-col w-full">
+          <label for="lastname" class="text-lg">Apellido:</label>
+          <input type="text" required name="lastname" id="lastname" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]">
+        </div>
+      }
+
+      {enterprise
+      ? <div class="flex flex-col w-full">
+          <label for="enterprise" class="text-lg">Compañía:</label>
+          <input type="text" required name="enterprise" id="enterprise" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]" value={enterprise}>
+        </div>
+      : <div class="flex flex-col w-full">
+          <label for="enterprise" class="text-lg">Compañía:</label>
+          <input type="text" required name="enterprise" id="enterprise" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]">
+        </div>
+      }
+      
+      {email ? <div class="flex flex-col w-full">
+          <label for="email" class="text-lg">E-mail: </label>
+          <input type="email" required readonly name="email" id="email" class="h-8 p-1 text-base text-gray-400 border-b-1 border-solid border-b-[var(--c-dark)]" value={email}>
+      </div>
+      :  <div class="flex flex-col w-full">
+          <label for="email" class="text-lg">E-mail:</label>
+          <input type="email" required readonly name="email" id="email" class="h-8 p-1 text-base text-gray-400 border-b-1 border-solid border-b-[var(--c-dark)]">
+        </div>
+      }
+      <div id="wrapper_form" class="w-full">
+        <div class="flex flex-col w-full">
+            <label for="phone" class="text-lg">Teléfono:</label>
+            <input type="text" required name="phone" id="phone" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]">
+        </div>
+        <div id="restriction_check_wrapper" class="w-full">
+          <div class="flex gap-6" id="restricciones_user">
+            <p class="text-lg mb-2">Indique si tiene alguna restricción alimenticia:</p>
+          </div>
+          <div class="flex gap-4 justify-start">
+            <div>
+              <label for="restriction_no" class="text-lg">No</label>
+              <input type="radio" name="has_restriction" id="restriction_no" value="false" required>
+            </div>
+            <div>
+              <label for="restriction_si" class="text-lg">Sí</label>
+              <input type="radio" name="has_restriction" id="restriction_si" value="true" required>
+            </div>
+          </div>
+        </div>
+
+        <div id="wrapper_restrictions" class="flex flex-col w-full" id="wrapper_restriction_name">
+          <label for="restriction" class="text-lg">Especifique tipo de restricción:</label>
+            <input type="text" name="restriction" id="restriction" class="h-8 p-1 text-base text-gray-700 border-b-1 border-solid border-b-[var(--c-dark)]">
+        </div>
+      </div>
+      <button type="submit" id="enviarbtn" class="rounded-full px-4 py-2 bg-[var(--c-primary-500)] text-white hover:bg-[var(--c-primary-400)] cursor-pointer w-48">Enviar</button>
+    </form>
+  </div>
+</section>
+
+
+<section class="overlay-box" id="overlay-box">
+  <section class="modalbox-wrapper" id="modal_box-wrapper">
+    <div id="close-modal">
+        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+          <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+          <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+        </svg>
+    </div>
+    <article class="text-center text-gray-200">
+      <h1 class="md:text-6xl text-3xl font-bold mb-6">Registro exitoso</h1>
+      <p class="text-lg">Nos alegra contar con tu presencia a nuestra 19ª Entrega de Premios Monarca.</p>
+      <p class="text-lg mt-2">En breve recibirás un correo confirmando tu participación.</p>
+      <p class="text-lg mt-2">En caso de no recibir la confirmación favor de mandar un correo a:</p>
+      <p class="text-base mt-2">premiosmonarca@weil.com.mx</p>
+      <p class="text-lg mt-2">Favor de revisar su bandeja de correo no deseado.</p>
+      <h3 class="text-2xl my-4">Agrega el evento a tu calendario</h3>
+      <div class="flex justify-center p-2 bg-gray-50/20 w-50 mx-auto rounded-lg gap-4">
+        <a href="https://www.addevent.com/event/8g89476q2nzc+apple" title="Apple" target="_blank" style="display:inline;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-[45px]">
+            <path fill="#CCCCCC" d="M447.1 332.7C446.9 296 463.5 268.3 497.1 247.9C478.3 221 449.9 206.2 412.4 203.3C376.9 200.5 338.1 224 323.9 224C308.9 224 274.5 204.3 247.5 204.3C191.7 205.2 132.4 248.8 132.4 337.5C132.4 363.7 137.2 390.8 146.8 418.7C159.6 455.4 205.8 545.4 254 543.9C279.2 543.3 297 526 329.8 526C361.6 526 378.1 543.9 406.2 543.9C454.8 543.2 496.6 461.4 508.8 424.6C443.6 393.9 447.1 334.6 447.1 332.7zM390.5 168.5C417.8 136.1 415.3 106.6 414.5 96C390.4 97.4 362.5 112.4 346.6 130.9C329.1 150.7 318.8 175.2 321 202.8C347.1 204.8 370.9 191.4 390.5 168.5z"/>
+          </svg>
+        </a>
+        <a href="https://www.addevent.com/event/8g89476q2nzc+google" title="Google" target="_blank" style="display:inline;">
+            <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-google-t1.png" alt="Google" width="45" border="0" style="width:45px;display:inline;" />
+        </a>
+        <a href="https://www.addevent.com/event/8g89476q2nzc+office365" title="Office 365" target="_blank" style="display:inline;">
+            <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-office365-t1.png" alt="Office 365" width="45" border="0" style="width:45px;display:inline;" />
+        </a>
+      </div>
+      <p class="sm:text-3xl text-3xl font-bold mt-8">¡GRACIAS!</p>
+    </article>
+</section>
+
+</section>
+<!-- FIN DE MODAL BOX -->
+
+
+<script>
+// ENVIAR FORMULARIO
+const form = document.getElementById('registro');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const loader = '<span class="loader" style="width: 26px; height: 26px; border: 4px solid #FFF; border-bottom-color: transparent; border-radius: 50%; display: inline-block; box-sizing: border-box; animation: rotation 1s linear infinite;"></span>';
+  const boton = document.getElementById('enviarbtn');
+  setTimeout(function () {
+      boton.innerHTML = loader;
+      boton.removeAttribute('type')
+  }, 50);
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  console.dir(data)
+
+  try {
+    const res = await fetch('/api/registro', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (res.ok) {
+      const result = await res.json();
+      showModal();
+      form.reset();
+      boton.style.display = 'none';
+      //alert('Registro exitoso: ' + result.message);
+    } else {
+      alert('Error en el registro');
+    }
+  } catch (err) {
+    alert('Error de conexión');
+    console.error(err);
+  }
+});
+
+// DIÁLOGO MODAL
+let elem = document.getElementById('overlay-box'),
+    fadeInInterval,
+    fadeOutInterval;
+        
+function showModal(){
+    clearInterval(fadeInInterval);
+    clearInterval(fadeOutInterval);
+    elem.fadeIn = function(timing) {
+        let newValue = 0;
+        elem.style.display = 'block';
+        elem.style.opacity = 0;
+        fadeInInterval = setInterval(function(){
+            if (newValue < 1) {
+                newValue += 0.01;
+            } else if (newValue === 1) {
+                clearInterval(fadeInInterval);
+            }
+            elem.style.opacity = newValue;
+        }, timing);
+    }
+    elem.fadeIn(4);
+    document.body.classList.add("stop-scrolling");
+};
+
+let cerrartrigger = document.querySelectorAll('#overlay-box, #close-modal svg')
+
+cerrartrigger.forEach(function (userItem) {
+  userItem.addEventListener('click',function(){
+    clearInterval(fadeInInterval);
+    clearInterval(fadeOutInterval);
+    elem.fadeOut = function(timing) {
+        let newValue = 1;
+        elem.style.opacity = 1;
+        fadeOutInterval = setInterval(function(){ 
+            if (newValue > 0) {
+            newValue -= 0.01;
+            } else if (newValue < 0) {
+            elem.style.opacity = 0;
+            elem.style.display = 'none';
+            clearInterval(fadeOutInterval);
+            }
+            elem.style.opacity = newValue;
+        }, timing);
+    }
+    elem.fadeOut(3);
+    document.body.classList.remove("stop-scrolling");
+});
+}
+
+)
+document.getElementById('modal_box-wrapper').addEventListener("click",function(e){
+    e.stopPropagation()
+});
+
+function validaCheck(container, checkView1, conditionCont, displayProp){
+  const containerInputs = document.getElementById(container);
+  const inputLists = containerInputs?.querySelectorAll('input');
+  const inputObserved1 = document.getElementById(checkView1);
+  const containerToggle = document.getElementById(conditionCont);
+  const inputsToggled = containerToggle?.querySelectorAll('input');
+  for(let i=0; i< inputLists.length; i++){
+    inputLists[i].addEventListener('change', () => {
+      if(inputObserved1.checked){
+        containerToggle.style.display = displayProp;
+        const innerInputs = containerToggle.querySelectorAll('input[type="radio"]');
+        innerInputs.forEach((e)=>{
+          e.checked = false;
+        })
+      } else {
+        containerToggle.style.display = 'none';
+        inputsToggled?.forEach((i)=>{
+          i.removeAttribute('required')
+        })
+      }
+    });
+  }
+}
+validaCheck('restriction_check_wrapper', 'restriction_si', 'wrapper_restrictions', 'flex');
+validaCheck('assistance_q', 'assistance_si', 'wrapper_form', 'block');
+</script>
