@@ -1,0 +1,86 @@
+# =========================
+# Dependencias
+# =========================
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn-cache/
+
+# =========================
+# Build / Output
+# =========================
+dist/
+.astro/
+build/
+.cache/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Variables de entorno
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Archivos temporales
+# =========================
+tmp/
+temp/
+
+# =========================
+# Vite (usado por Astro)
+# =========================
+node_modules/.vite/
+
+# =========================
+# Tailwind
+# =========================
+# (no genera archivos persistentes por sí solo,
+# pero dejamos por si hay configs experimentales)
+.tailwind/
+
+# =========================
+# Testing
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# Archivos generados accidentalmente
+# =========================
+*.tgz
+
+# =========================
+# Tipos / TS
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Misc
+# =========================
+*.local
