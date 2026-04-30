@@ -1,0 +1,191 @@
+---
+import Title from '../components/TitleInovation.astro';
+import {Image} from 'astro:assets';
+import imgRibbonPictures from '../assets/ribbon-photos.png';
+---
+<section id="Registro">
+	<Title title="¡Bienvenidos a Innovation in Action 2026!" />
+	<p class="ribbon-text">A continuación, te pedimos completar todos los campos del registro, esto nos ayudará a optimizar organización y logística para ofrecerte la mejor de las experiencias.</p>
+	<form action="" id="registro">
+		<h4>DATOS GENERALES</h4>
+		<div class="">
+			<label for="name">Nombre</label>
+			<input type="text" name="name" id="name" required>
+		</div>
+		<div class="">
+			<label for="lastname">Apellido</label>
+			<input type="text" name="lastname" id="lastname" required>
+		</div>
+		<div class="">
+			<label for="enterprise">Empresa</label>
+			<input type="text" name="enterprise" id="enterprise" required>
+		</div>
+		<div class="">
+			<label for="position">Cargo</label>
+			<input type="text" name="position" id="position" required>
+		</div>
+		<div>
+			<div class="">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" required>
+			</div>
+			<div class="">
+				<label for="phone">Teléfono</label>
+				<input type="phone" name="phone" id="phone" required>
+			</div>
+		</div>
+		<h4>INFORMACIÓN DE ITINERARIO</h4>
+		<p>Por favor comparta su itinerario de viaje, esto nos ayudará para una logística de transporte</p>
+		<div>
+			<div class="">
+				<label for="arrive_date">Fecha de llegada</label>
+				<select name="arrive_date" id="arrive_date">
+					<option value=""></option>
+					<option value="mayo_25">25 de mayo</option>
+					<option value="mayo_26">26 de mayo</option>
+					<option value="mayo_27">27 de mayo</option>
+					<option value="mayo_28">28 de mayo</option>
+					<option value="mayo_29">29 de mayo</option>
+				</select>
+			</div>
+			<h5>Horario de llegada</h5>
+			<div class="">
+				<label for="arrive_hour">Hora</label>
+				<select name="arrive_hour" id="arrive_hour">
+					<option value=""></option>
+					<option value="00">00</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="arrive_minute">Minuto</label>
+				<select name="arrive_minute" id="arrive_minute">
+					<option value=""></option>
+					<option value="00">00</option>
+					<option value="01">05</option>
+					<option value="02">10</option>
+					<option value="03">15</option>
+					<option value="04">20</option>
+					<option value="05">25</option>
+					<option value="06">30</option>
+					<option value="07">35</option>
+					<option value="08">40</option>
+					<option value="09">45</option>
+					<option value="10">50</option>
+					<option value="11">55</option>
+				</select>
+			</div>
+		</div>
+		<div class="">
+			<label for="arrive_flight_number">Número de vuelo de llegada</label>
+			<input type="text" name="arrive_flight_number" id="arrive_flight_number" required>
+		</div>
+		<div>
+			<div class="">
+				<label for="depart_date">Fecha de llegada</label>
+				<select name="depart_date" id="depart_date">
+					<option value=""></option>
+					<option value="mayo_25">25 de mayo</option>
+					<option value="mayo_26">26 de mayo</option>
+					<option value="mayo_27">27 de mayo</option>
+					<option value="mayo_28">28 de mayo</option>
+					<option value="mayo_29">29 de mayo</option>
+				</select>
+			</div>
+			<h5>Horario de llegada</h5>
+			<div class="">
+				<label for="depart_hour">Hora</label>
+				<select name="depart_hour" id="depart_hour">
+					<option value=""></option>
+					<option value="00">00</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="depart_minute">Minuto</label>
+				<select name="depart_minute" id="depart_minute">
+					<option value=""></option>
+					<option value="00">00</option>
+					<option value="01">05</option>
+					<option value="02">10</option>
+					<option value="03">15</option>
+					<option value="04">20</option>
+					<option value="05">25</option>
+					<option value="06">30</option>
+					<option value="07">35</option>
+					<option value="08">40</option>
+					<option value="09">45</option>
+					<option value="10">50</option>
+					<option value="11">55</option>
+				</select>
+			</div>
+		</div>
+		<div class="">
+			<label for="depart_flight_number">Número de vuelo de regreso</label>
+			<input type="text" name="depart_flight_number" id="depart_flight_number" required>
+		</div>
+		<h4>ADICIONALES</h4>
+		<div class="">
+			<label for="restrictions">Restricciones Alimenticias</label>
+			<input type="text" name="restrictions" id="restrictions">
+		</div>
+		<div class="">
+			<label for="size">Talla de Playera</label>
+			<select name="size" id="size">
+				<option value=""></option>
+				<option value="CH">CH</option>
+				<option value="M">M</option>
+				<option value="G">G</option>
+				<option value="XG">XG</option>
+				<option value="XXG">XXG</option>
+			</select>
+		</div>
+
+		<button type="submit">Enviar</button>
+	</form>
+	<Image src={imgRibbonPictures} alt="" />
+</section>

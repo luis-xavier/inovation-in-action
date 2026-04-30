@@ -3,19 +3,27 @@ import Layout from '../layouts/Layout.astro';
 import MainLogo from '../assets/logo-innovation.svg';
 import {Image} from 'astro:assets';
 import Gradient from '../components/GradientBar.astro';
+import Title from '../components/TitleInovation.astro';
+import Form from '../layouts/formulario.astro';
 
 import imgIglesia from '../assets/iglesia-fondo.jpg';
 import imgRibbonPictures from '../assets/ribbon-photos.png';
+import imgVillamercedes from '../assets/venue-villa-mercedes.png';
+import imgPicheta from '../assets/venue-picheta.png';
+import imgKokomo from '../assets/venue-kokomo.png';
+import imgPianoBar from '../assets/venue-lenin-piano-bar.png';
+import imgMugy from '../assets/venue-mugy.png';
+import LogoCommscope from '../assets/logo-commscope.svg';
 ---
 
 <Layout>
 
-<header class="flex flex-row">
-	<MainLogo />
-	<nav class="flex w-1/3">
-		<a href="#">Inicio</a>
-		<a href="">Registro</a>
-		<a href="">Venues</a>
+<header class="flex flex-col sm:flex-row flex-col justify-between items-center">
+	<MainLogo class="sm:w-64 w-4/5" />
+	<nav class="flex gap-2">
+		<a href="#Inicio">Inicio</a>
+		<a href="#Registro">Registro</a>
+		<a href="#Venues">Venues</a>
 		<a href="">Agenda</a>
 		<a href="">Conferencistas</a>
 		<a href="">Sponsors</a>
@@ -23,13 +31,14 @@ import imgRibbonPictures from '../assets/ribbon-photos.png';
 	</nav>
 </header>
 
-<section>
+<section id="portada" class="relative">
 	<Image src={imgIglesia} alt="Iglesia de Yucatán" />
+	<LogoCommscope class="absolute z-10 bottom-2 right-10 w-48" />
 </section>
 
 <section id="Inicio">
 	<div>
-		<h2 class="logoTitle">¿Qué es INNOVATION IN ACTION?</h2>
+		<Title title="¿Qué es INNOVATION IN ACTION?" />
 		<p><b>Innovation in Action</b> es un evento corporativo concebido como un espacio estratégico donde convergen usuarios finales y socios de canal para explorar el impacto real de la innovación tecnológica en los negocios. Más que una exhibición de soluciones, se trata de una plataforma integral que combina demostraciones prácticas, presentaciones de casos de éxito y análisis de tendencias, con el propósito de inspirar y guiar la toma de decisiones. El encuentro ofrece a los asistentes la oportunidad de comprender cómo las soluciones presentadas pueden optimizar, reducir costos y abrir nuevas posibilidades de crecimiento, al tiempo que fortalece la relación entre clientes, integradores y especialistas.</p>
 		<p>En un entorno dinámico y colaborativo, <b>Innovation in Action</b> se posiciona como un catalizador que conecta la visión de futuro con la implementación concreta, generando valor tanto para quienes buscan transformar sus operaciones como para quienes impulsan la adopción de soluciones en el mercado. Con un enfoque corporativo y orientado a resultados, el evento se convierte en un punto de referencia para quienes desean estar a la vanguardia y aprovechar al máximo las oportunidades que ofrece la innovación.</p>
 		<MainLogo />
@@ -37,191 +46,29 @@ import imgRibbonPictures from '../assets/ribbon-photos.png';
 	<Image src={imgRibbonPictures} alt="" />
 </section>
 <Gradient />
-<section>
-	<h2 class="logoTitle">¡Bienvenidos a Innovation in Action 2026!</h2>
-	<p class="ribbon-text">A continuación, te pedimos completar todos los campos del registro, esto nos ayudará a optimizar organización y logística para ofrecerte la mejor de las experiencias.</p>
-	<form action="" id="registro">
-		<h4>DATOS GENERALES</h4>
-		<div class="">
-			<label for="name">Nombre</label>
-			<input type="text" name="name" id="name" required>
-		</div>
-		<div class="">
-			<label for="lastname">Apellido</label>
-			<input type="text" name="lastname" id="lastname" required>
-		</div>
-		<div class="">
-			<label for="enterprise">Empresa</label>
-			<input type="text" name="enterprise" id="enterprise" required>
-		</div>
-		<div class="">
-			<label for="position">Cargo</label>
-			<input type="text" name="position" id="position" required>
-		</div>
-		<div>
-			<div class="">
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" required>
-			</div>
-			<div class="">
-				<label for="phone">Teléfono</label>
-				<input type="phone" name="phone" id="phone" required>
-			</div>
-		</div>
-		<h4>INFORMACIÓN DE ITINERARIO</h4>
-		<p>Por favor comparta su itinerario de viaje, esto nos ayudará para una logística de transporte</p>
-		<div>
-			<div class="">
-				<label for="arrive_date">Fecha de llegada</label>
-				<select name="arrive_date" id="arrive_date">
-					<option value=""></option>
-					<option value="mayo_25">25 de mayo</option>
-					<option value="mayo_26">26 de mayo</option>
-					<option value="mayo_27">27 de mayo</option>
-					<option value="mayo_28">28 de mayo</option>
-					<option value="mayo_29">29 de mayo</option>
-				</select>
-			</div>
-			<h5>Horario de llegada</h5>
-			<div class="">
-				<label for="arrive_hour">Hora</label>
-				<select name="arrive_hour" id="arrive_hour">
-					<option value=""></option>
-					<option value="00">00</option>
-					<option value="01">01</option>
-					<option value="02">02</option>
-					<option value="03">03</option>
-					<option value="04">04</option>
-					<option value="05">05</option>
-					<option value="06">06</option>
-					<option value="07">07</option>
-					<option value="08">08</option>
-					<option value="09">09</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-					<option value="21">21</option>
-					<option value="22">22</option>
-					<option value="23">23</option>
-				</select>
-			</div>
-			<div class="">
-				<label for="arrive_minute">Minuto</label>
-				<select name="arrive_minute" id="arrive_minute">
-					<option value=""></option>
-					<option value="00">00</option>
-					<option value="01">05</option>
-					<option value="02">10</option>
-					<option value="03">15</option>
-					<option value="04">20</option>
-					<option value="05">25</option>
-					<option value="06">30</option>
-					<option value="07">35</option>
-					<option value="08">40</option>
-					<option value="09">45</option>
-					<option value="10">50</option>
-					<option value="11">55</option>
-				</select>
-			</div>
-		</div>
-		<div class="">
-			<label for="arrive_flight_number">Número de vuelo de llegada</label>
-			<input type="text" name="arrive_flight_number" id="arrive_flight_number" required>
-		</div>
-		<div>
-			<div class="">
-				<label for="depart_date">Fecha de llegada</label>
-				<select name="depart_date" id="depart_date">
-					<option value=""></option>
-					<option value="mayo_25">25 de mayo</option>
-					<option value="mayo_26">26 de mayo</option>
-					<option value="mayo_27">27 de mayo</option>
-					<option value="mayo_28">28 de mayo</option>
-					<option value="mayo_29">29 de mayo</option>
-				</select>
-			</div>
-			<h5>Horario de llegada</h5>
-			<div class="">
-				<label for="depart_hour">Hora</label>
-				<select name="depart_hour" id="depart_hour">
-					<option value=""></option>
-					<option value="00">00</option>
-					<option value="01">01</option>
-					<option value="02">02</option>
-					<option value="03">03</option>
-					<option value="04">04</option>
-					<option value="05">05</option>
-					<option value="06">06</option>
-					<option value="07">07</option>
-					<option value="08">08</option>
-					<option value="09">09</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-					<option value="21">21</option>
-					<option value="22">22</option>
-					<option value="23">23</option>
-				</select>
-			</div>
-			<div class="">
-				<label for="depart_minute">Minuto</label>
-				<select name="depart_minute" id="depart_minute">
-					<option value=""></option>
-					<option value="00">00</option>
-					<option value="01">05</option>
-					<option value="02">10</option>
-					<option value="03">15</option>
-					<option value="04">20</option>
-					<option value="05">25</option>
-					<option value="06">30</option>
-					<option value="07">35</option>
-					<option value="08">40</option>
-					<option value="09">45</option>
-					<option value="10">50</option>
-					<option value="11">55</option>
-				</select>
-			</div>
-		</div>
-		<div class="">
-			<label for="depart_flight_number">Número de vuelo de regreso</label>
-			<input type="text" name="depart_flight_number" id="depart_flight_number" required>
-		</div>
-		<h4>ADICIONALES</h4>
-		<div class="">
-			<label for="restrictions">Restricciones Alimenticias</label>
-			<input type="text" name="restrictions" id="restrictions">
-		</div>
-		<div class="">
-			<label for="size">Talla de Playera</label>
-			<select name="size" id="size">
-				<option value=""></option>
-				<option value="CH">CH</option>
-				<option value="M">M</option>
-				<option value="G">G</option>
-				<option value="XG">XG</option>
-				<option value="XXG">XXG</option>
-			</select>
-		</div>
 
-		<button type="submit">Enviar</button>
-	</form>
-	<Image src={imgRibbonPictures} alt="" />
-</section>
+<Form id="Registro" />
+
 <Gradient />
+<section id="Venues">
+	<article>
+		<div>
+			<Title title="HOTEL VILLA MERCEDES" />
+			<p>El Hotel <b>Villa Mercedes Mérida</b> ofrece una experiencia de hospitalidad enfocada en la funcionalidad, el confort y la eficiencia, integrando un diseño contemporáneo con referencias sutiles a la identidad yucateca.</p>
+			<p>Su arquitectura sobria, espacios amplios y atmósfera tranquila crean un entorno ideal para estancias ejecutivas, reuniones y eventos corporativos, mientras que la distribución de sus áreas y la atención al detalle en materiales, colores y acabados garantizan una experiencia profesional alineada con los más altos estándares de servicio.</p>
+			<p>Además cuenta con excelente ubicación, quedando a 5 minutos de distancia de Paseo Montejo</p>
+		</div>
+		<Image src={imgVillamercedes} alt="" />
+	</article>
+
+	<article>
+		<div>
+			<Title title="KOKOMO BEACH CLUB" />
+			<p>El Beach Club Kokomito es un rincón frente al mar que invita a relajarse, con su ambiente fresco y acogedor, es el lugar perfecto para que cada visita se sienta como una escapada especial. Aquí puedes saborear cocteles refrescantes y platillos deliciosos mientras contemplas el horizonte azul. Es un espacio pensado para desconectar y dejarse llevar por la tranquilidad del mar. Kokomito es ese refugio playero que convierte cualquier día en una experiencia inolvidable.</p>
+		</div>
+		<Image src={imgKokomo} alt="" />
+	</article>
+</section>
+
+
 </Layout>
