@@ -5,6 +5,7 @@ import {Image} from 'astro:assets';
 import Gradient from '../components/GradientBar.astro';
 import Title from '../components/TitleInovation.astro';
 import Form from '../layouts/formulario.astro';
+import NavBar from '../components/Navbar.astro';
 
 import imgIglesia from '../assets/iglesia-fondo.jpg';
 import imgRibbonPictures from '../assets/ribbon-photos.png';
@@ -18,25 +19,14 @@ import LogoCommscope from '../assets/logo-commscope.svg';
 
 <Layout>
 
-<header class="flex flex-col sm:flex-row flex-col justify-between items-center">
-	<MainLogo class="sm:w-64 w-4/5" />
-	<nav class="flex gap-2">
-		<a href="#Inicio">Inicio</a>
-		<a href="#Registro">Registro</a>
-		<a href="#Venues">Venues</a>
-		<a href="">Agenda</a>
-		<a href="">Conferencistas</a>
-		<a href="">Sponsors</a>
-		<a href="">Faq</a>
-	</nav>
-</header>
+<NavBar />
 
 <section id="portada" class="relative">
-	<Image src={imgIglesia} alt="Iglesia de Yucatán" />
+	<Image src={imgIglesia} alt="Iglesia de Yucatán" class="w-full" />
 	<LogoCommscope class="absolute z-10 bottom-2 right-10 w-48" />
 </section>
 
-<section id="Inicio">
+<section id="Inicio" class="flex md:flex-row flex-col items-middle">
 	<div>
 		<Title title="¿Qué es INNOVATION IN ACTION?" />
 		<p><b>Innovation in Action</b> es un evento corporativo concebido como un espacio estratégico donde convergen usuarios finales y socios de canal para explorar el impacto real de la innovación tecnológica en los negocios. Más que una exhibición de soluciones, se trata de una plataforma integral que combina demostraciones prácticas, presentaciones de casos de éxito y análisis de tendencias, con el propósito de inspirar y guiar la toma de decisiones. El encuentro ofrece a los asistentes la oportunidad de comprender cómo las soluciones presentadas pueden optimizar, reducir costos y abrir nuevas posibilidades de crecimiento, al tiempo que fortalece la relación entre clientes, integradores y especialistas.</p>

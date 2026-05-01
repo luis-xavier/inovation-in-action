@@ -1,0 +1,295 @@
+---
+import MainLogo from '../assets/logo-innovation.svg';
+---
+
+<header class="flex flex-row justify-between items-center md:px-8 py-2 px-2 bg-white gap-4 fixed w-full" id="navbar">
+	<MainLogo class="md:w-64 w-1/2 h-auto" />
+	<nav class="" id="menu_main">
+		<a href="#Inicio">Inicio</a>
+		<a href="#Registro">Registro</a>
+		<a href="#Venues">Venues</a>
+		<a href="">Agenda</a>
+		<a href="">Conferencistas</a>
+		<a href="">Sponsors</a>
+		<a href="">Faq</a>
+	</nav>
+	<div class="menu_anvorguesa md:hidden flex" id="menu_anvorguesa">
+		<p>MENU</p>
+		<div class="anvorguesa">
+		<svg viewBox="0 0 800 600">
+			<path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+			<path d="M300,320 L540,320" id="middle"></path>
+			<path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+		</svg>
+		</div>
+	</div>
+</header>
+<div class="overlay-menu"></div>
+<style>
+#navbar{
+    transition: all .3s ease-out;
+    z-index: 98;
+}
+#menu_main{
+    position: relative;
+    z-index: 99;
+    height: 100%;
+    margin: 0;
+    gap:1em;
+    display: flex;
+    flex-direction: row;
+    a{
+        display: block;
+        text-decoration: none;
+        transition: all .2s;
+        position: relative;
+        &:after{
+            display: block;
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: #333;
+            bottom: 0;
+            transform: translateX(50%);
+            opacity: 0;
+            transition: all .2s;
+        }
+        &:hover{
+            color: #333;
+            &:after{
+                width: 100%;
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+.menu_anvorguesa{
+	color: #000000;
+	align-items: center;
+	position: relative;
+	z-index: 501;
+    cursor: pointer;
+    p{
+        margin: 0 px 0;
+        font-size: .8em;
+    }
+}
+.anvorguesa {
+  margin: 0;
+  padding: 0;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+}
+.anvorguesa svg {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.anvorguesa path {
+  fill: none;
+  -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  stroke-width: 40px;
+  stroke-linecap: round;
+  stroke: #000000;
+  stroke-dashoffset: 0px;
+}
+.anvorguesa path#top,
+.anvorguesa path#bottom {
+  stroke-dasharray: 240px 950px;
+}
+.anvorguesa path#middle {
+  stroke-dasharray: 240px 240px;
+}
+.cross path#top,
+.cross path#bottom {
+  stroke-dashoffset: -650px;
+  stroke-dashoffset: -650px;
+}
+.cross path#middle {
+  stroke-dashoffset: -115px;
+  stroke-dasharray: 1px 220px;
+}
+.overlay-menu{
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFFDD;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 97;
+    transition: opacity .5s;
+    height: 0;
+    opacity: 0;
+    &.visible{
+        height: 100vh;
+        opacity: .5;
+    }
+}
+
+@media (max-width: 768px){
+    .menu_anvorguesa{
+	    display: flex;
+        align-items: center;
+        p{
+            margin: 0;
+        }
+    }
+    #menu_main{
+        position: fixed;
+        flex-direction: column;
+        align-content: center;
+        height: 95vh;
+        width: 100vw;
+        background: #EEEEEEF6;
+        z-index: 500;
+        top: 0;
+        left: 0;
+        transition: all ease-out .5s;
+        transition-timing-function: cubic-bezier(0.507, 0.881, 0.781, 1.031);
+        box-shadow: -7px 0px 16px 0px rgba(0,0,0,0.75);
+        transform: translateY(-120%);
+
+        a{
+            text-decoration: none;
+            transition: all .3s;
+                &:first-child{
+                margin-top: 130px;
+            }
+            &:after{
+                transition: all .3s;
+                display: block;
+                position:absolute;
+                content: '';
+                height: 2px;
+                width: 100%;
+                background: #333;
+                transform-origin: center;
+                transform: scaleX(0);
+                transform: translateX(0);
+                bottom: -4px;
+            }
+            &:hover:after{
+                transform: scaleX(1);
+            }
+        }
+        &.open{
+            transform: translateY(0%);
+        }
+    }
+}
+</style>
+
+<script>
+//Despliegue de menú de hamburguesa
+const anvorguesa = document.getElementById('menu_anvorguesa');
+const menu = document.getElementById('menu_main');
+const mquery = window.matchMedia("(max-width: 992px)").matches;
+
+function abrirCerrarAnvorguesa() {
+    anvorguesa.classList.toggle('cross');
+    menu.classList.toggle('open');
+    document.body.classList.toggle("stop-scrolling")
+    let overlay = document.getElementsByClassName('overlay-menu')[0];
+    overlay.classList.toggle('visible');
+};
+
+anvorguesa.addEventListener('click', function () {
+    abrirCerrarAnvorguesa();
+});
+
+let menuItems = menu.querySelectorAll('a');
+let scrollItems = Array.from(menuItems).map((item) => {
+    const hash = item.getAttribute('href').split('#')[1];
+    return document.getElementById(hash);
+}).filter(Boolean);
+//Variable para sube y baja el menú según dirección de scroll
+let prevScrollpos1 = 0;
+
+window.addEventListener('scroll', function () {
+    //Sube y baja el menú según dirección de scroll
+    let currentScrollPos = window.pageYOffset;
+    let navbar = document.getElementById("navbar");
+    if (prevScrollpos1 > currentScrollPos) {
+        navbar.style.top = "0";
+        prevScrollpos1 = currentScrollPos;
+    } else if (currentScrollPos > 10 && prevScrollpos1 < currentScrollPos) {
+        navbar.style.top = "-120px";
+        prevScrollpos1 = currentScrollPos;
+    }
+    if (currentScrollPos > 200) {
+        navbar.classList.add('sup');
+    } else {
+        navbar.classList.remove('sup');
+    }
+    //Finaliza Sube y baja el menú según dirección de scroll
+
+    const fromTop = window.scrollY || window.pageYOffset;
+    const viewportHeight = window.innerHeight;
+    let activeItem = null;
+    let smallestDistance = Infinity; // Para encontrar el elemento más cercano al top
+
+    // Buscar el elemento más cercano al top del viewport
+    Array.from(scrollItems).forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const elementTop = rect.top;
+        const elementBottom = rect.bottom;
+
+        // Verificar si el elemento está visible en el viewport
+        const isVisible = (
+            (elementTop >= 0 && elementTop <= viewportHeight) || // Parte superior visible
+            (elementBottom >= 0 && elementBottom <= viewportHeight) || // Parte inferior visible
+            (elementTop < 0 && elementBottom > viewportHeight) // Elemento más grande que el viewport
+        );
+
+        // Si el elemento está visible, calcular su distancia al top del viewport
+        if (isVisible) {
+            const distanceToTop = Math.abs(elementTop);
+            if (distanceToTop < smallestDistance) {
+                smallestDistance = distanceToTop;
+                activeItem = item;
+            }
+        }
+    });
+});
+
+menuItems?.forEach((item) => {
+    item.addEventListener('click', function (e) {
+        const href = item.getAttribute('href');
+        let offsetTop;
+
+        if (href === '#') {
+            offsetTop = 0;
+        } else {
+            const targetElement = document.querySelector(href);
+            const targetPosition = targetElement.getBoundingClientRect().top;
+            const scrollPosition = window.pageYOffset;
+            offsetTop = targetPosition + scrollPosition;
+        }
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+        if (mquery) {
+            abrirCerrarAnvorguesa();
+        }
+
+        e.preventDefault();
+    });
+});
+</script>
