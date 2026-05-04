@@ -10,34 +10,54 @@ import NavBar from '../components/Navbar.astro';
 import imgIglesia from '../assets/iglesia-fondo.jpg';
 import imgRibbonPictures from '../assets/ribbon-photos.png';
 import imgVillamercedes from '../assets/venue-villa-mercedes.png';
+import imgVillamercedesM from '../assets/venue-villa-mercedes-m.jpg';
 import imgPicheta from '../assets/venue-picheta.png';
+import imgPichetaM from '../assets/venue-picheta-m.jpg';
 import imgKokomo from '../assets/venue-kokomo.png';
+import imgKokomoM from '../assets/venue-kokomo-m.jpg';
 import imgPianoBar from '../assets/venue-lenin-piano-bar.png';
+import imgPianoBarM from '../assets/venue-lenin-piano-bar-m.jpg';
 import imgMugy from '../assets/venue-mugy.png';
+import imgMugyM from '../assets/venue-mugy-m.jpg';
 import LogoCommscope from '../assets/logo-commscope.svg';
+import imgRibbonVector from '../assets/ribbon-color.png';
+import imgRibbbonVectorM  from '../assets/ribbon-color-m.png';
+import imgPedroAlatorre from '../assets/speaker-pedro-alatorre.png';
+import SponsorLuguer from '../assets/sponsor-luguer.svg';
+import SponsorLAxis from '../assets/sponsor-axis.svg';
+import SponsorCdc from '../assets/sponsor-cdc-group.svg';
+import NumberOne from '../assets/punto-1.svg';
+import NumberTwo from '../assets/punto-2.svg';
+import NumberThree from '../assets/punto-3.svg';
+import NumberFour from '../assets/punto-4.svg';
+import NumberFive from '../assets/punto-5.svg';
+import imgHands from '../assets/img-reasons.png';
+import imgHandsM from '../assets/img-reasons-m.jpg';
 ---
 
 <Layout>
 
 <NavBar />
 
-<section id="portada" class="relative">
+<div class="w-full h-0.5 bg-transparent"></div>
+<section id="portada">
 	<Image src={imgIglesia} alt="Iglesia de Yucatán" class="w-full" />
-	<LogoCommscope class="absolute z-10 bottom-2 right-10 w-48" />
+	<LogoCommscope class="logo-commscope" />
 </section>
 
-<section id="Inicio" class="flex md:flex-row flex-col items-middle">
-	<div>
+<section id="Inicio" class="flex md:flex-row flex-col lg:items-center items-end gap-8">
+	<div class="flex flex-col gap-4 justify-center md:pl-8 p-6">
 		<Title title="¿Qué es INNOVATION IN ACTION?" />
 		<p><b>Innovation in Action</b> es un evento corporativo concebido como un espacio estratégico donde convergen usuarios finales y socios de canal para explorar el impacto real de la innovación tecnológica en los negocios. Más que una exhibición de soluciones, se trata de una plataforma integral que combina demostraciones prácticas, presentaciones de casos de éxito y análisis de tendencias, con el propósito de inspirar y guiar la toma de decisiones. El encuentro ofrece a los asistentes la oportunidad de comprender cómo las soluciones presentadas pueden optimizar, reducir costos y abrir nuevas posibilidades de crecimiento, al tiempo que fortalece la relación entre clientes, integradores y especialistas.</p>
 		<p>En un entorno dinámico y colaborativo, <b>Innovation in Action</b> se posiciona como un catalizador que conecta la visión de futuro con la implementación concreta, generando valor tanto para quienes buscan transformar sus operaciones como para quienes impulsan la adopción de soluciones en el mercado. Con un enfoque corporativo y orientado a resultados, el evento se convierte en un punto de referencia para quienes desean estar a la vanguardia y aprovechar al máximo las oportunidades que ofrece la innovación.</p>
-		<MainLogo />
+		<MainLogo class="w-[70%] md:w-[300px] mx-auto md:mx-0" />
 	</div>
-	<Image src={imgRibbonPictures} alt="" />
+	<Image src={imgRibbonPictures} alt="" class="" />
 </section>
+
 <Gradient />
 
-<Form id="Registro" />
+<Form />
 
 <Gradient />
 <section id="Venues">
@@ -48,7 +68,18 @@ import LogoCommscope from '../assets/logo-commscope.svg';
 			<p>Su arquitectura sobria, espacios amplios y atmósfera tranquila crean un entorno ideal para estancias ejecutivas, reuniones y eventos corporativos, mientras que la distribución de sus áreas y la atención al detalle en materiales, colores y acabados garantizan una experiencia profesional alineada con los más altos estándares de servicio.</p>
 			<p>Además cuenta con excelente ubicación, quedando a 5 minutos de distancia de Paseo Montejo</p>
 		</div>
-		<Image src={imgVillamercedes} alt="" />
+		<Image src={imgVillamercedes} alt="" class="hidden md:block" />
+		<Image src={imgVillamercedesM} alt="" class="block md:hidden" />
+	</article>
+
+	<article>
+		<Image src={imgPicheta} alt="" class="hidden md:block" />
+		<Image src={imgPichetaM} alt="" class="block md:hidden" />
+		<div>
+			<Title title="TERRAZA PICHETA" />
+			<p>En un edificio de más de 350 años, en el corazón del centro de Mérida, encontramos un restaurante enfocado en generar una experiencia con todos los sentidos, dedicado a establecerse como un tambor de unión entre lo prehispánico, lo colonial y lo actual.</p>
+			<p>Un lugar de gastronomía de origen, de evolución y de autores. Picheta ofrece una evolución de nuestra comida tipica, una experiencia de experiencias: vibrante, apasionada, cálida, excitante y profundamente yucateca.</p>
+		</div>
 	</article>
 
 	<article>
@@ -56,9 +87,347 @@ import LogoCommscope from '../assets/logo-commscope.svg';
 			<Title title="KOKOMO BEACH CLUB" />
 			<p>El Beach Club Kokomito es un rincón frente al mar que invita a relajarse, con su ambiente fresco y acogedor, es el lugar perfecto para que cada visita se sienta como una escapada especial. Aquí puedes saborear cocteles refrescantes y platillos deliciosos mientras contemplas el horizonte azul. Es un espacio pensado para desconectar y dejarse llevar por la tranquilidad del mar. Kokomito es ese refugio playero que convierte cualquier día en una experiencia inolvidable.</p>
 		</div>
-		<Image src={imgKokomo} alt="" />
+		<Image src={imgKokomo} alt="" class="hidden md:block" />
+		<Image src={imgKokomoM} alt="" class="block md:hidden" />
+	</article>
+
+	<article>
+		<Image src={imgPianoBar} alt="" class="hidden md:block" />
+		<Image src={imgPianoBarM} alt="" class="block md:hidden" />
+		<div>
+			<Title title="LENNON PIANO BAR" />
+			<p>Lennon Piano Bar, ubicado en Mérida, es un espacio íntimo y con mucha personalidad que combina el encanto de un lounge clásico con la energía de la música en vivo. El protagonista, por supuesto, es el piano: cada presentación aporta un toque elegante y cercano que convierte la velada en una experiencia memorable.</p>
+			<p>Un lugar de gastronomía de origen, de evolución y de autores. Picheta ofrece una evolución de nuestra comida tipica, una experiencia de experiencias: vibrante, apasionada, cálida, excitante y profundamente yucateca.</p>
+		</div>
+	</article>
+
+	<article>
+		<div>
+			<Title title="MUSEO DE LA GASTRONOMÍA YUCATECA (MUGY)" />
+			<p>El Museo de la Gastronomía Yucateca (MUGY) en Mérida es un espacio encantador donde la tradición culinaria se convierte en experiencia viva. Al recorrerlo, se siente el calor de la cultura maya y la riqueza de los sabores que han dado identidad a Yucatán. Sus ambientes evocan antiguas cocinas y mercados, mientras los aromas invitan a descubrir platillos auténticos preparados con esmero. Es un lugar que combina historia, arte y gastronomía, ideal para quienes buscan conectar con las raíces de la región. Visitar el MUGY es dejarse envolver por la hospitalidad yucateca y saborear un viaje que despierta todos los sentidos</p>
+		</div>
+		<Image src={imgMugy} alt="" class="hidden md:block" />
+		<Image src={imgMugyM} alt="" class="block md:hidden" />
 	</article>
 </section>
 
+<Gradient />
+
+<section id="Agenda">
+	<div class="ribbon-text">
+		<h3>MIERCOLES 27 DE MAYO</h3>
+	</div>
+	<div class="table-container">
+		<table>
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th>Actividad</th>
+					<th>Venue</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Hora">Todo el dia</td>
+					<td data-label="Actividad">Llegadas</td>
+					<td data-label="Venue">Aeropuerto Internacional de Mérida</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">14:00 hrs.</td>
+					<td data-label="Actividad">Almuerzo</td>
+					<td data-label="Venue">Restaurante Hotel Villa Mercedes</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">15:00 hrs.</td>
+					<td data-label="Actividad">Demos On Site</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td data-label="Hora">19:00 hrs.</td>
+					<td data-label="Actividad">Cena Bienvenida</td>
+					<td data-label="Venue">Terraza Picheta</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<div class="ribbon-text">
+		<h3>JUEVES 28 DE MAYO</h3>
+	</div>
+	<div class="table-container">
+		<table>
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th>Actividad</th>
+					<th>Venue</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Hora">7:30 hrs.</td>
+					<td data-label="Actividad">Desayuno</td>
+					<td data-label="Venue">Restaurante Hotel Villa Mercedes</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">8:30 hrs.</td>
+					<td data-label="Actividad">Bienvenida</td>
+					<td data-label="Venue">Salón por definir</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">8:40 hrs.</td>
+					<td data-label="Actividad">Sesiones Magistrales</td>
+					<td data-label="Venue">Salón por definir</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">13:00 hrs.</td>
+					<td data-label="Actividad">Lunch Beach Club & Actividad Team Building</td>
+					<td data-label="Venue">Kokomo, Progreso</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">18:00 hrs.</td>
+					<td data-label="Actividad">Regreso al Hotel & Refresh</td>
+					<td data-label=""></td>
+				</tr>
+				<tr>
+					<td data-label="Hora">18:30 hrs.</td>
+					<td data-label="Actividad">Cena</td>
+					<td data-label="Venue">Restaurante Hotel Villa Mercedes</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">20:30 hrs.</td>
+					<td data-label="Actividad">Cocktail  de Cierre & Reuniones de Networking</td>
+					<td data-label="Venue">Lennon Piano Bar</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<div class="ribbon-text">
+		<h3>VIERNES 29 DE MAYO</h3>
+	</div>
+	<div class="table-container">
+		<table>
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th>Actividad</th>
+					<th>Venue</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Hora">9:00 hrs.</td>
+					<td data-label="Actividad">Desayuno</td>
+					<td data-label="Venue">Museo Gastronómico Yucateco</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">11:30 hrs.</td>
+					<td data-label="Actividad">Regreso al Hotel</td>
+					<td data-label=""></td>
+				</tr>
+				<tr>
+					<td data-label="Hora">12:00 hrs.</td>
+					<td data-label="Actividad">Check Out</td>
+					<td data-label="Venue">Lobby del Hotel</td>
+				</tr>
+				<tr>
+					<td data-label="Hora">Todo el día</td>
+					<td data-label="Actividad">Transporte al Aeropuerto</td>
+					<td data-label=""></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<Gradient />
+
+<section id="Conferencistas">
+	<div class="mt-8 md:ml-8 ml-4">
+		<Title title="CONFERENCISTAS" />
+	</div>
+	<div class="flex justify-between items-center md:flex-row flex-col gap-4">
+
+		<div class="flex items-center justify-between gap-6 mx-[24px]">
+			<div class="md:pl-12">
+				<h5 class="text-2xl font-bold mb-2">Pedro Alatorre</h5>
+				<p class="text-xs italic font-light">Director de Ventas</p>
+				<p class="text-xs italic font-light">Commscope México</p>
+			</div>
+			<Image src={imgPedroAlatorre} alt="" class="block md:w-auto w-[160px]"/>
+		</div>
+
+		<Image src={imgRibbonVector} alt="" class="md:block hidden w-sm" />
+		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
+	</div>
+</section>
+
+<Gradient />
+
+<section id="Sponsors">
+	<div class="my-8 md:ml-8 ml-4">
+		<Title title="SPONSORS" />
+	</div>
+
+	<div class="flex justify-between items-center flex-col md:flex-row gap-8">
+
+		<div class="flex flex-col gap-14 w-full">
+			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Patrocinadores World Cup</h5>
+				<div class="sponsor-gradient"></div>
+				<div class="">
+					<SponsorLuguer class="h-[70px]" />
+				</div>
+			</div>
+
+			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Patrocinadores Champion League</h5>
+				<div class="sponsor-gradient"></div>
+				<div class="">
+					<SponsorLAxis class="h-[70px]" />
+				</div>
+			</div>
+
+			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Patrocinadores Mex League</h5>
+				<div class="sponsor-gradient"></div>
+				<div class="">
+					<SponsorCdc class="h-[70px]" />
+				</div>
+			</div>
+			<MainLogo class="w-[40%] md:w-[150px] mx-auto" />
+		</div>
+
+		<Image src={imgRibbonVector} alt="" class="md:block hidden w-sm" />
+		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
+	</div>
+</section>
+
+<Gradient />
+
+<section id="faqs">
+	<div class="mt-8 md:ml-8 ml-4">
+		<Title title="5 RAZONES PARA ASISTIR" />
+	</div>
+
+	<div class="flex justify-between items-center flex-col md:flex-row gap-8 mt-8">
+
+		<div class="flex flex-col gap-12 md:ml-12 mx-[24px]">
+			<div class="flex flex-row md:gap-8 gap-4">
+				<NumberOne class="w-24" />
+				<div class="flex gap-2 flex-col items-start">
+					<h5 class="font-bold text-xl">Descubre soluciones innovadoras para tu negocio</h5>
+					<p>Podrás conocer de primera mano las tecnologías más recientes y cómo aplicarlas directamente en tus operaciones para mejorar productividad y eficiencia.</p>
+				</div>
+			</div>
+
+			<div class="flex flex-row md:gap-8 gap-4">
+				<NumberTwo class="w-24" />
+				<div class="flex gap-2 flex-col items-start">
+					<h5 class="font-bold text-xl">Aprende de casos reales y experiencias prácticas</h5>
+					<p>Escucha cómo otras empresas similares a la tuya han resuelto retos con estas soluciones, lo que te dará ideas concretas para implementar en tu organización.</p>
+				</div>
+			</div>
+
+			<div class="flex flex-row md:gap-8 gap-4">
+				<NumberThree class="w-24" />
+				<div class="flex gap-2 flex-col items-start">
+					<h5 class="font-bold text-xl">Conecta con expertos y especialistas</h5>
+					<p>Tendrás acceso directo a profesionales que pueden responder tus dudas y orientarte sobre la mejor manera de aprovechar la innovación en tu entorno.</p>
+				</div>
+			</div>
+
+			<div class="flex flex-row md:gap-8 gap-4">
+				<NumberFour class="w-24" />
+				<div class="flex gap-2 flex-col items-start">
+					<h5 class="font-bold text-xl">Explora oportunidades de crecimiento</h5>
+					<p>Identifica nuevas formas de optimizar procesos, reducir costos y abrir posibilidades de expansión gracias a las herramientas presentadas.</p>
+				</div>
+			</div>
+
+			<div class="flex flex-row md:gap-8 gap-4">
+				<NumberFive class="w-24" />
+				<div class="flex gap-2 flex-col items-start">
+					<h5 class="font-bold text-xl">Participa en un espacio diseñado para ti</h5>
+					<p>El evento está pensado específicamente para usuarios finales, con contenidos prácticos y relevantes que te ayudarán a tomar decisiones informadas sobre tecnología.</p>
+				</div>
+			</div>
+
+			<MainLogo class="w-[60%] md:w-[250px] mx-auto h-[80px]" />
+		</div>
+
+		<Image src={imgHands} alt="" class="md:block hidden w-[40%]" />
+		<Image src={imgHandsM} alt="" class="md:hidden block w-full" />
+	</div>
+	
+</section>
+
+<Gradient />
+
+<section id="faqs">
+	<div class="mt-8 md:ml-8 ml-4">
+		<Title title="FAQ" />
+	</div>
+
+	<div class="flex justify-between items-end flex-col md:flex-row gap-8 my-8">
+
+		<div class="flex flex-col gap-12 w-full">
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Dónde será Innovation in Action?</h5>
+				<p><b>Innovation in Action</b> se realizará en la ciudad de Mérida, Yucatán</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Qué duración tiene Innovation in Action?</h5>
+				<p><b>Innovation in Action</b> tiene duración de 3 días, durante los cuales tenemos planeada una agenda nutritiva para nuestros clientes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Qué duración tiene Innovation in Action?</h5>
+				<p><b>Innovation in Action</b> tiene duración de 3 días, durante los cuales tenemos planeada una agenda nutritiva para nuestros clientes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Si asisto desde otro estado, ¿el hospedaje está incluido?</h5>
+				<p>Sí, el hospedaje está incluido por 2 noches y el hotel sede es Villa Mercedes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Al asistir al evento, ¿los alimentos están incluidos?</h5>
+				<p>Sí, al participar en <b>Innovation in Action,</b> tendrás la cobertura de desayunos, comidas y cenas aplicables dentro de la agenda.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Los vuelos están incluidos?</h5>
+				<p>No, CommScope no cubre costo de vuelos. El integrador deberá cubrir los vuelos propios y de sus clientes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Habrá transporte desde y hacia el aeropuerto?</h5>
+				<p>Sí, contaremos con servicio de transporte desde y hacia el aeropuerto en la ciudad de Mérida, para cubrir de manera óptima este servicio, es importante contar con tu itinerario de vuelo. Los transportes hacia y desde el aeropuerto fuera de la ciudad de Mérida no están incluidos.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Puedo invitar a un acompañante?</h5>
+				<p><b>Innovation in Action</b> es un evento planeado para generación de negocios, por lo que no es posible llevar como acompañantes a familiares, parejas y/o amigos</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Hay código de vestimenta?</h5>
+				<p>Sí <b>Innovation in Action</b> requiere un código de vestimenta para las distintas actividades. Haga <a href="">clic aquí</a> para conocerlo.</p>
+			</div>
+			<MainLogo class="w-[50%] md:w-[250px] mx-auto" />
+		</div>
+
+		<Image src={imgRibbonVector} alt="" class="md:block hidden w-2xs" />
+		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
+	</div>
+	
+</section>
+
+<Gradient />
 
 </Layout>

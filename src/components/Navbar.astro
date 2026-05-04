@@ -8,10 +8,10 @@ import MainLogo from '../assets/logo-innovation.svg';
 		<a href="#Inicio">Inicio</a>
 		<a href="#Registro">Registro</a>
 		<a href="#Venues">Venues</a>
-		<a href="">Agenda</a>
-		<a href="">Conferencistas</a>
-		<a href="">Sponsors</a>
-		<a href="">Faq</a>
+		<a href="#Agenda">Agenda</a>
+		<a href="#Conferencistas">Conferencistas</a>
+		<a href="#Sponsors">Sponsors</a>
+		<a href="#faqs">Faq</a>
 	</nav>
 	<div class="menu_anvorguesa md:hidden flex" id="menu_anvorguesa">
 		<p>MENU</p>
@@ -29,6 +29,7 @@ import MainLogo from '../assets/logo-innovation.svg';
 #navbar{
     transition: all .3s ease-out;
     z-index: 98;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
 }
 #menu_main{
     position: relative;
@@ -126,7 +127,7 @@ import MainLogo from '../assets/logo-innovation.svg';
 .overlay-menu{
     width: 100vw;
     height: 100vh;
-    background-color: #FFFFFFDD;
+    background-color: #FFFFFFEE;
     opacity: .5;
     position: fixed;
     top: 0;
@@ -155,7 +156,8 @@ import MainLogo from '../assets/logo-innovation.svg';
         align-content: center;
         height: 95vh;
         width: 100vw;
-        background: #EEEEEEF6;
+        padding: 0 2em;
+        background: #FEFEFEF6;
         z-index: 500;
         top: 0;
         left: 0;
@@ -282,7 +284,7 @@ menuItems?.forEach((item) => {
         }
 
         window.scrollTo({
-            top: offsetTop,
+            top: offsetTop - 90,
             behavior: 'smooth'
         });
         if (mquery) {

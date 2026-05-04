@@ -84,3 +84,6 @@ coverage/
 # Misc
 # =========================
 *.local
+
+registro.php
+registro-b.php
