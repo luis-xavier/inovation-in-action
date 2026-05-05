@@ -6,6 +6,7 @@ import Gradient from '../components/GradientBar.astro';
 import Title from '../components/TitleInovation.astro';
 import Form from '../layouts/formulario.astro';
 import NavBar from '../components/Navbar.astro';
+import Sponsors from '../layouts/sponsors.astro';
 
 import imgIglesia from '../assets/iglesia-fondo.jpg';
 import imgRibbonPictures from '../assets/ribbon-photos.png';
@@ -23,9 +24,6 @@ import LogoCommscope from '../assets/logo-commscope.svg';
 import imgRibbonVector from '../assets/ribbon-color.png';
 import imgRibbbonVectorM  from '../assets/ribbon-color-m.png';
 import imgPedroAlatorre from '../assets/speaker-pedro-alatorre.png';
-import SponsorLuguer from '../assets/sponsor-luguer.svg';
-import SponsorLAxis from '../assets/sponsor-axis.svg';
-import SponsorCdc from '../assets/sponsor-cdc-group.svg';
 import NumberOne from '../assets/punto-1.svg';
 import NumberTwo from '../assets/punto-2.svg';
 import NumberThree from '../assets/punto-3.svg';
@@ -267,44 +265,7 @@ import imgHandsM from '../assets/img-reasons-m.jpg';
 
 <Gradient />
 
-<section id="Sponsors">
-	<div class="my-8 md:ml-8 ml-4">
-		<Title title="SPONSORS" />
-	</div>
-
-	<div class="flex justify-between items-center flex-col md:flex-row gap-8">
-
-		<div class="flex flex-col gap-14 w-full">
-			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">Patrocinadores World Cup</h5>
-				<div class="sponsor-gradient"></div>
-				<div class="">
-					<SponsorLuguer class="h-[70px]" />
-				</div>
-			</div>
-
-			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">Patrocinadores Champion League</h5>
-				<div class="sponsor-gradient"></div>
-				<div class="">
-					<SponsorLAxis class="h-[70px]" />
-				</div>
-			</div>
-
-			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">Patrocinadores Mex League</h5>
-				<div class="sponsor-gradient"></div>
-				<div class="">
-					<SponsorCdc class="h-[70px]" />
-				</div>
-			</div>
-			<MainLogo class="w-[40%] md:w-[150px] mx-auto" />
-		</div>
-
-		<Image src={imgRibbonVector} alt="" class="md:block hidden w-sm" />
-		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
-	</div>
-</section>
+<Sponsors />
 
 <Gradient />
 
@@ -417,7 +378,7 @@ import imgHandsM from '../assets/img-reasons-m.jpg';
 
 			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
 				<h5 class="font-bold text-xl">¿Hay código de vestimenta?</h5>
-				<p>Sí <b>Innovation in Action</b> requiere un código de vestimenta para las distintas actividades. Haga <a href="">clic aquí</a> para conocerlo.</p>
+				<p>Sí <b>Innovation in Action</b> requiere un código de vestimenta para las distintas actividades. Haz <a href="">clic aquí</a> para conocerlo.</p>
 			</div>
 			<MainLogo class="w-[50%] md:w-[250px] mx-auto" />
 		</div>

@@ -1,0 +1,343 @@
+---
+import {Image} from 'astro:assets';
+import Title from '../components/TitleInovation.astro';
+import MainLogo from '../assets/logo-innovation.svg';
+import imgRibbonVector from '../assets/ribbon-color.png';
+import imgRibbbonVectorM  from '../assets/ribbon-color-m.png'
+import SponsorAxis from '../assets/sponsors-axis.png';
+import SponsorCdc from '../assets/sponsors-cdc.png';
+import SponsorLuguer from '../assets/sponsors-luguer.png';
+import SponsorCharofil from '../assets/sponsors-charofil.png';
+import SponsorVerkada from '../assets/sponsors-verkada.png';
+import SponsorFluke from '../assets/sponsors-fluke.png';
+import SponsorWescoAnixter from '../assets/sponsors-wesco-anixter.png';
+---
+<section id="Sponsors">
+	<div class="my-8 md:ml-8 ml-4">
+		<Title title="SPONSORS" />
+	</div>
+
+	<div class="flex justify-between items-center flex-col md:flex-row gap-8">
+
+		<div class="flex flex-col gap-14 w-full">
+			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Patrocinadores World Cup</h5>
+				<div class="sponsor-gradient"></div>
+				<div class="sponsor-list">
+					<Image src={SponsorLuguer} alt="" class="trigger-modal" data-modalname="luguer" />
+				</div>
+			</div>
+
+			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Patrocinadores Champion League</h5>
+				<div class="sponsor-gradient"></div>
+				<div class="sponsor-list">
+					<Image src={SponsorAxis} alt="" class="trigger-modal" data-modalname="axis" />
+                    <Image src={SponsorCharofil} alt="" class="trigger-modal" data-modalname="charofil" />
+                    <Image src={SponsorVerkada} alt="" class="trigger-modal" data-modalname="verkada" >
+				</div>
+			</div>
+
+			<div class="flex gap-2 flex-col items-center w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Patrocinadores Mex League</h5>
+				<div class="sponsor-gradient"></div>
+				<div class="sponsor-list">
+                    <Image src={SponsorCdc} alt="" class="trigger-modal" data-modalname="cdc" />
+                    <Image src={SponsorFluke} alt="" class="trigger-modal" data-modalname="fluke" />
+                    <Image src={SponsorWescoAnixter} alt="" class="trigger-modal" data-modalname="wesco" />
+				</div>
+			</div>
+			<MainLogo class="w-[40%] md:w-[150px] mx-auto" />
+		</div>
+
+		<Image src={imgRibbonVector} alt="" class="md:block hidden w-sm" />
+		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
+	</div>
+</section>
+
+<div class="modal-overlay" id="axis">
+    <div class="modalbox">
+        <div class="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+                <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+                <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+            </svg>
+        </div>
+        <article class="">
+            <Image src={SponsorAxis} alt="" />
+            <p class="text-normal">Como líder en el sector de la videovigilancia, desarrollamos y suministramos soluciones de red innovadoras que mejoran la seguridad, la protección, la inteligencia empresarial y la eficiencia operativa para nuestros clientes en todo el mundo.</p>
+            <div class="flex sm:flex-row flex-col gap-6 mt-4 justify-between">
+                <a href="https://www.axis.com/es-mx" target="_blank">Visitar sitio</a>
+                <a href="https://www.linkedin.com/company/axis-communications/" target="_blank">Seguir en Linkedin</a>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+
+<div class="modal-overlay" id="luguer">
+    <div class="modalbox">
+        <div class="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+                <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+                <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+            </svg>
+        </div>
+        <article class="">
+            <Image src={SponsorLuguer} alt="" />
+            <p class="text-normal">XXX</p>
+            <div class="flex sm:flex-row flex-col gap-6 mt-4 justify-between">
+                <a href="#" target="_blank">Visitar sitio</a>
+                <a href="#" target="_blank">Seguir en Linkedin</a>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+
+<div class="modal-overlay" id="charofil">
+    <div class="modalbox">
+        <div class="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+                <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+                <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+            </svg>
+        </div>
+        <article class="">
+            <Image src={SponsorCharofil} alt="" />
+            <p class="text-normal">Somos una empresa 100% mexicana, tenemos más de 30 años de experiencia en el mercado eléctrico y de telecomunicaciones, realizando alianzas estratégicas con los líderes de la industria. Contamos con una red amplia de distribuidores en México y Centroamérica. Fabricamos con energía limpia en dos plantas locales en CDMX y Monterrey, buscamos ofrecer las mejores condiciones competitivas para nuestros socios comerciales. Nuestros productos son fabricados con ingeniería especializada e innovadora en el mercado de las charolas.</p>
+            <div class="flex sm:flex-row flex-col gap-6 mt-4 justify-between">
+                <a href="https://charofil.mx/" target="_blank">Visitar sitio</a>
+                <a href="https://www.linkedin.com/company/charofil" target="_blank">Seguir en Linkedin</a>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+
+<div class="modal-overlay" id="verkada">
+    <div class="modalbox">
+        <div class="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+                <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+                <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+            </svg>
+        </div>
+        <article class="">
+            <Image src={SponsorVerkada} alt="" />
+            <p class="text-normal">Verkada está transformando la forma en que las organizaciones protegen a la gente y espacios con una plataforma integral impulsada por IA. Como líder en seguridad física en la nube, Verkada unifica la videovigilancia, el control de acceso, sensores de calidad del aire, alarmas, intercomunicadores y herramientas de trabajo en una sola plataforma conectada —Verkada Command— que permite a los equipos actuar de forma proactiva y crear entornos más seguros e inteligentes.</p>
+            <div class="flex sm:flex-row flex-col gap-6 mt-4 justify-between">
+                <a href="https://www.verkada.com/es/" target="_blank">Visitar sitio</a>
+                <a href="https://www.linkedin.com/company/verkada/" target="_blank">Seguir en Linkedin</a>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+
+<div class="modal-overlay" id="cdc">
+    <div class="modalbox">
+        <div class="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+                <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+                <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+            </svg>
+        </div>
+        <article class="">
+            <Image src={SponsorCdc} alt="" />
+            <p class="text-normal">Somos una empresa mayorista especializada en el mercado de las telecomunicaciones, con amplia experiencia en atender las necesidades de nuestros socios comerciales mediante un servicio integral y personalizado. Nuestro compromiso es brindar soluciones completas, eficientes y de alta calidad para cualquier nivel de negocio. Contamos con un extenso portafolio de productos y servicios segmentados en diversas áreas estratégicas, como administración de cableado, cableado estructurado y fibra óptica, comunicación, herramientas y equipos de medición, networking, protección a la salud, respaldo de energía y seguridad. Trabajamos para impulsar el crecimiento y éxito de nuestros clientes siempre.</p>
+            <div class="flex sm:flex-row flex-col gap-6 mt-4 justify-between">
+                <a href="https://cdcgroup.mx/index.html" target="_blank">Visitar sitio</a>
+                <a href="https://www.linkedin.com/company/cdcgroupmx/posts/?feedView=all" target="_blank">Seguir en Linkedin</a>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+
+<div class="modal-overlay" id="fluke">
+    <div class="modalbox">
+        <div class="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+                <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+                <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+            </svg>
+        </div>
+        <article class="">
+            <Image src={SponsorFluke} alt="" />
+            <p class="text-normal">Fluke Networks es una compañía líder global que desarrolla herramientas y soluciones especializadas para la certificación, validación y troubleshooting de redes, ayudando a empresas y centros de datos a asegurar la calidad, disponibilidad y desempeño de sus infraestructuras de conectividad.</p>
+            <div class="flex sm:flex-row flex-col gap-6 mt-4 justify-between">
+                <a href="https://es.flukenetworks.com" target="_blank">Visitar sitio</a>
+                <a href="https://www.linkedin.com/showcase/fluke-networks/" target="_blank">Seguir en Linkedin</a>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+
+<div class="modal-overlay" id="wesco">
+    <div class="modalbox">
+        <div class="close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+                <path d="M11.2,10l3.8-3.8c.3-.3.3-.9,0-1.2-.3-.3-.9-.3-1.2,0l-3.8,3.8-3.8-3.8c-.3-.3-.9-.3-1.2,0-.3.3-.3.9,0,1.2l3.8,3.8-3.8,3.8c-.3.3-.3.9,0,1.2.3.3.9.3,1.2,0l3.8-3.8,3.8,3.8c.3.3.9.3,1.2,0,.3-.3.3-.9,0-1.2l-3.8-3.8Z" style="fill: #fff;"/>
+                <path d="M10,1.5c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5S1.5,14.7,1.5,10,5.3,1.5,10,1.5M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10,10-4.5,10-10S15.5,0,10,0h0Z" style="fill: #fff;"/>
+            </svg>
+        </div>
+        <article class="">
+            <Image src={SponsorWescoAnixter} alt="" />
+            <p class="text-normal">Wesco Anixter es un proveedor global de soluciones de distribución B2B, servicios logísticos y soluciones de cadena de suministro. La compañía se enfoca en construir, conectar, energizar y proteger el mundo</p>
+            <div class="flex sm:flex-row flex-col gap-6 mt-4 justify-between">
+                <a href="https://www.anixter.com" target="_blank">Visitar sitio</a>
+                <a href="https://www.linkedin.com/company/wescoanixter" target="_blank">Seguir en Linkedin</a>
+            </div>
+        </article>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+
+<style>
+.sponsor-list{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+        width: 160px;
+        height: auto;
+        transition: all ease .3s;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+.modal-overlay{
+    z-index: 998;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    .modalbox{
+        z-index: 999;
+        position: fixed;
+        width: clamp(160px, 70%, 360px);
+        height: auto;
+        border-radius: 8px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        padding: 32px 24px;
+        box-sizing: border-box;
+        color: #333;
+        font-size: 14px;
+        background: linear-gradient(50deg,rgba(255, 255, 255, .8) 0%, rgba(230, 230, 230, .8) 100%);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(250, 250, 250, .5);
+        transition: all ease-out .4s;
+        img{
+            width: 60%;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        article{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+         .modalbox{
+            transform: translate(-50%, -50%) scale(1);
+         }
+    }
+    a{
+        padding: 6px 12px 8px;
+        border-radius: 18px;
+        background: rgba(100, 100, 100, .5);
+        font-size: 13px;
+        color: #fff;
+        font-weight: 800;
+        letter-spacing: .07em;
+        text-align: center;
+        &:hover{
+           background: rgba(100, 100, 100, .6);
+        }
+    }
+}
+
+</style>
+
+<script>
+let currentModal = null;
+
+function showModal(modal) {
+    if (!modal) return;
+    modal.classList.add('is-open');
+    document.body.classList.add("stop-scrolling");
+    currentModal = modal;
+}
+
+function closeModal(modal) {
+    if (!modal) return;
+
+    modal.classList.remove('is-open');
+    document.body.classList.remove("stop-scrolling");
+
+    if (currentModal === modal) {
+        currentModal = null;
+    }
+}
+
+// Abrir modal
+document.querySelectorAll('.trigger-modal').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+        const target = trigger.dataset.modalname;
+        const modal = document.getElementById(target);
+        showModal(modal);
+    });
+});
+
+// Cerrar al hacer click en overlay
+document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+    overlay.addEventListener('click', () => {
+        closeModal(overlay);
+    });
+});
+
+// Evitar que click dentro del modal lo cierre
+document.querySelectorAll('.modalbox').forEach((box) => {
+    box.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
+// Botón de cerrar (SVG)
+document.querySelectorAll('.close-modal').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const modal = btn.closest('.modal-overlay');
+        closeModal(modal);
+    });
+});
+
+// Cerrar con tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && currentModal) {
+        closeModal(currentModal);
+    }
+});
+
+
+
+</script>
