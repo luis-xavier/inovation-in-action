@@ -51,6 +51,7 @@ Thumbs.db
 # =========================
 tmp/
 temp/
+.DS_Store
 
 # =========================
 # Vite (usado por Astro)
