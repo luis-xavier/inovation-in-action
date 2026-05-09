@@ -1,0 +1,110 @@
+---
+import '../styles/modal.css';
+import {Image} from 'astro:assets';
+import Title from '../components/TitleInovation.astro';
+import imgRibbonVector from '../assets/ribbon-color.png';
+import imgRibbbonVectorM  from '../assets/ribbon-color-m.png';
+import MainLogo from '../assets/logo-innovation.svg';
+import dresscode from '../assets/drescode.jpg';
+---
+<section id="5reasons">
+	<div class="mt-8 md:ml-8 ml-4">
+		<Title title="FAQ" />
+	</div>
+
+	<div class="flex justify-between items-end flex-col md:flex-row gap-8 my-8">
+
+		<div class="flex flex-col gap-12 w-full">
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Dónde será Innovation in Action?</h5>
+				<p><b>Innovation in Action</b> se realizará en la ciudad de Mérida, Yucatán</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Qué duración tiene Innovation in Action?</h5>
+				<p><b>Innovation in Action</b> tiene duración de 3 días, durante los cuales tenemos planeada una agenda nutritiva para nuestros clientes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Qué duración tiene Innovation in Action?</h5>
+				<p><b>Innovation in Action</b> tiene duración de 3 días, durante los cuales tenemos planeada una agenda nutritiva para nuestros clientes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Si asisto desde otro estado, ¿el hospedaje está incluido?</h5>
+				<p>Sí, el hospedaje está incluido por 2 noches y el hotel sede es Villa Mercedes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">Al asistir al evento, ¿los alimentos están incluidos?</h5>
+				<p>Sí, al participar en <b>Innovation in Action,</b> tendrás la cobertura de desayunos, comidas y cenas aplicables dentro de la agenda.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Los vuelos están incluidos?</h5>
+				<p>No, CommScope no cubre costo de vuelos. El integrador deberá cubrir los vuelos propios y de sus clientes.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Habrá transporte desde y hacia el aeropuerto?</h5>
+				<p>Sí, contaremos con servicio de transporte desde y hacia el aeropuerto en la ciudad de Mérida, para cubrir de manera óptima este servicio, es importante contar con tu itinerario de vuelo. Los transportes hacia y desde el aeropuerto fuera de la ciudad de Mérida no están incluidos.</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Puedo invitar a un acompañante?</h5>
+				<p><b>Innovation in Action</b> es un evento planeado para generación de negocios, por lo que no es posible llevar como acompañantes a familiares, parejas y/o amigos</p>
+			</div>
+
+			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
+				<h5 class="font-bold text-xl">¿Hay código de vestimenta?</h5>
+				<p>Sí <b>Innovation in Action</b> requiere un código de vestimenta para las distintas actividades. <span class="trigger-modal  underline text-[#01aaa3] hover:text-[#01a884] font-bold cursor-pointer" data-modalname="dresscode">Haz clic aquí</span> para conocerlo.</p>
+			</div>
+			<MainLogo class="w-[50%] md:w-[250px] mx-auto" />
+		</div>
+
+		<Image src={imgRibbonVector} alt="" class="md:block hidden w-2xs" />
+		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
+	</div>
+	
+</section>
+
+<div class="modal-overlay" id="dresscode">
+    <div class="close-mbox-wrapper">
+        <div class="close-modal">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.1999 9.9999L14.9999 6.1999C15.2999 5.8999 15.2999 5.2999 14.9999 4.9999C14.6999 4.6999 14.0999 4.6999 13.7999 4.9999L9.9999 8.7999L6.1999 4.9999C5.8999 4.6999 5.2999 4.6999 4.9999 4.9999C4.6999 5.2999 4.6999 5.8999 4.9999 6.1999L8.7999 9.9999L4.9999 13.7999C4.6999 14.0999 4.6999 14.6999 4.9999 14.9999C5.2999 15.2999 5.8999 15.2999 6.1999 14.9999L9.9999 11.1999L13.7999 14.9999C14.0999 15.2999 14.6999 15.2999 14.9999 14.9999C15.2999 14.6999 15.2999 14.0999 14.9999 13.7999L11.1999 9.9999Z"/>
+            </svg>
+        </div>
+        <div class="modalbox">
+            <article class="">
+                <Image src={dresscode} alt="" />
+                <div class="flex sm:flex-row flex-col gap-6 mt-6 mb-1 justify-center">
+                    <a href="/dresscode.pdf" download="dresscode">Descargar PDF</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!-- FIN DE MODAL BOX -->
+<style>
+.modal-overlay{
+    .close-mbox-wrapper{
+        width: clamp(160px, 92%, 720px);
+        height: auto;
+        max-height: 96vh;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        gap: .5em;
+    }
+    .modalbox{
+        max-height: 90vh;
+        padding: 1px 1px 12px;
+        border-radius: 16px;
+    }
+    img{
+        width: 100%;
+    }
+}
+</style>
+<script src="../scripts/modal.js"></script>

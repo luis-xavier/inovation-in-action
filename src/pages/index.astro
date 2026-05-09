@@ -7,6 +7,7 @@ import Title from '../components/TitleInovation.astro';
 import Form from '../layouts/formulario.astro';
 import NavBar from '../components/Navbar.astro';
 import Sponsors from '../layouts/sponsors.astro';
+import Faq from '../layouts/faq.astro';
 
 import imgIglesia from '../assets/iglesia-fondo.jpg';
 import imgRibbonPictures from '../assets/ribbon-photos.png';
@@ -328,66 +329,7 @@ import imgHandsM from '../assets/img-reasons-m.jpg';
 
 <Gradient />
 
-<section id="5reasons">
-	<div class="mt-8 md:ml-8 ml-4">
-		<Title title="FAQ" />
-	</div>
-
-	<div class="flex justify-between items-end flex-col md:flex-row gap-8 my-8">
-
-		<div class="flex flex-col gap-12 w-full">
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">¿Dónde será Innovation in Action?</h5>
-				<p><b>Innovation in Action</b> se realizará en la ciudad de Mérida, Yucatán</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">¿Qué duración tiene Innovation in Action?</h5>
-				<p><b>Innovation in Action</b> tiene duración de 3 días, durante los cuales tenemos planeada una agenda nutritiva para nuestros clientes.</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">¿Qué duración tiene Innovation in Action?</h5>
-				<p><b>Innovation in Action</b> tiene duración de 3 días, durante los cuales tenemos planeada una agenda nutritiva para nuestros clientes.</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">Si asisto desde otro estado, ¿el hospedaje está incluido?</h5>
-				<p>Sí, el hospedaje está incluido por 2 noches y el hotel sede es Villa Mercedes.</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">Al asistir al evento, ¿los alimentos están incluidos?</h5>
-				<p>Sí, al participar en <b>Innovation in Action,</b> tendrás la cobertura de desayunos, comidas y cenas aplicables dentro de la agenda.</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">¿Los vuelos están incluidos?</h5>
-				<p>No, CommScope no cubre costo de vuelos. El integrador deberá cubrir los vuelos propios y de sus clientes.</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">¿Habrá transporte desde y hacia el aeropuerto?</h5>
-				<p>Sí, contaremos con servicio de transporte desde y hacia el aeropuerto en la ciudad de Mérida, para cubrir de manera óptima este servicio, es importante contar con tu itinerario de vuelo. Los transportes hacia y desde el aeropuerto fuera de la ciudad de Mérida no están incluidos.</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">¿Puedo invitar a un acompañante?</h5>
-				<p><b>Innovation in Action</b> es un evento planeado para generación de negocios, por lo que no es posible llevar como acompañantes a familiares, parejas y/o amigos</p>
-			</div>
-
-			<div class="flex gap-2 flex-col items-start w-[90%] mx-auto">
-				<h5 class="font-bold text-xl">¿Hay código de vestimenta?</h5>
-				<p>Sí <b>Innovation in Action</b> requiere un código de vestimenta para las distintas actividades. Haz <a href="">clic aquí</a> para conocerlo.</p>
-			</div>
-			<MainLogo class="w-[50%] md:w-[250px] mx-auto" />
-		</div>
-
-		<Image src={imgRibbonVector} alt="" class="md:block hidden w-2xs" />
-		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
-	</div>
-	
-</section>
+<Faq />
 
 <Gradient />
 
