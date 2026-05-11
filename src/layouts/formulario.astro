@@ -54,11 +54,9 @@ import Title from '../components/TitleInovation.astro';
 			<label for="arrive_date">Fecha de llegada</label>
 			<select name="arrive_date" id="arrive_date">
 				<option value=""></option>
-				<option value="mayo_25">25 de mayo</option>
 				<option value="mayo_26">26 de mayo</option>
 				<option value="mayo_27">27 de mayo</option>
-				<option value="mayo_28">28 de mayo</option>
-				<option value="mayo_29">29 de mayo</option>
+
 			</select>
 		</div>
 		<div class="form-section-double">
@@ -117,17 +115,15 @@ import Title from '../components/TitleInovation.astro';
 		</div>
 
 		<h5>Datos de salida</h5>
-		<div class="form-section">
+		div class="form-section">
 			<label for="depart_date">Fecha de salida</label>
 			<select name="depart_date" id="depart_date">
 				<option value=""></option>
-				<option value="mayo_25">25 de mayo</option>
-				<option value="mayo_26">26 de mayo</option>
-				<option value="mayo_27">27 de mayo</option>
-				<option value="mayo_28">28 de mayo</option>
 				<option value="mayo_29">29 de mayo</option>
+				<option value="mayo_29">30 de mayo</option>
 			</select>
 		</div>
+
 		<div class="form-section-double">
 			<div class="form-section">
 				<label for="depart_hour">Hora de salida</label>
@@ -276,7 +272,7 @@ form.addEventListener('submit', async (e) => {
 let elem = document.getElementById('overlay-box'),
     fadeInInterval,
     fadeOutInterval;
-        
+
 function showModal(){
     clearInterval(fadeInInterval);
     clearInterval(fadeOutInterval);

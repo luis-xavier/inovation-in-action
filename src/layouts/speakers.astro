@@ -1,0 +1,169 @@
+---
+import {Image} from 'astro:assets';
+import Title from '../components/TitleInovation.astro';
+import imgRibbonVector from '../assets/ribbon-color.png';
+import imgRibbbonVectorM  from '../assets/ribbon-color-m.png';
+import imgPedroAlatorre from '../assets/speaker-pedro-alatorre.png';
+import imgGustavoLopez from '../assets/speaker-gustavo-lopez.png';
+import imgPepeBonilla from '../assets/speaker-pepe-bonilla.png';
+import imgFedeVillegas from '../assets/speaker-federico-villegas.png';
+import imgJuanJose from '../assets/speaker-juan-jose-gomez.png';
+import imgMarioLopez from '../assets/speaker-juan-jose-gomez.png';
+import imgOscarMorales from '../assets/speaker-oscar-charofil.png';
+---
+<section id="Conferencistas">
+	<div class="mt-8 md:ml-8 ml-4">
+		<Title title="CONFERENCISTAS" />
+	</div>
+        <article>
+            <div class="card-speaker">
+                <div >
+                    <h5>Gustavo López</h5>
+                    <p >VP of Sales CALA</p>
+                    <p >CommScope México</p>
+                    <a href="https://www.linkedin.com/in/gustavo-lopez-07660416/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgPedroAlatorre} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
+            <div class="card-speaker">
+                <div >
+                    <h5>Pedro Alatorre</h5>
+                    <p >Director de Ventas</p>
+                    <p >CommScope México</p>
+                    <a href="https://www.linkedin.com/in/pedro-alatorre-648252173/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgGustavoLopez} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
+            <div class="card-speaker">
+                <div >
+                    <h5>José "Pepe" Bonilla</h5>
+                    <p >CALA Channel Network Leader</p>
+                    <p >CommScope México</p>
+                    <a href="https://www.linkedin.com/in/ppbonilla/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgPepeBonilla} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
+            <div class="card-speaker">
+                <div >
+                    <h5>Federico Villegas</h5>
+                    <p >System Engineer</p>
+                    <p >CommScope México</p>
+                    <a href="https://www.linkedin.com/in/federico-jose-villegas-2025b7198/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgFedeVillegas} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
+            <div class="card-speaker">
+                <div >
+                    <h5>Juan José Gómez</h5>
+                    <p >Account Manager</p>
+                    <p >CommScope México</p>
+                    <a href="https://www.linkedin.com/in/juan-jos%C3%A9-g%C3%B3mez-mendoza-29699356/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgJuanJose} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
+            <!--div class="card-speaker">
+                <div >
+                    <h5>Mario López</h5>
+                    <p >Account Manager</p>
+                    <p >CommScope México</p>
+                    <a href="https://www.linkedin.com/in/mario-lopez-rcdd-dcdc-osp-rtpm-nts-wd-bicsi-certified-06936abb/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgMarioLopez} alt="" class="block md:w-auto w-[160px]"/>
+            </div-->
+            <div class="card-speaker">
+                <div >
+                    <h5>Oscar Morales</h5>
+                    <p >Especialista Comercial</p>
+                    <p >Charofil</p>
+                    <a href="https://www.linkedin.com/in/oscar-morales-carranza-466a73346/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgOscarMorales} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
+        </article>
+
+		<Image src={imgRibbonVector} alt="" class="md:block hidden w-sm" />
+		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
+</section>
+
+<style>
+#Conferencistas{
+    position: relative;
+    >img{
+        position: absolute;
+        bottom: -29%;
+        right: 0;
+        z-index: 0;
+        width: 23%;
+        opacity: .2;
+    }
+    article{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2%;
+        row-gap: 3em;
+        justify-content: space-between;
+        margin: 40px auto 200px;
+        width: clamp(90%, 94%, 1200px);
+        max-width: 1200px;
+        z-index: 1;
+    }
+}
+.card-speaker{
+    width: clamp(300px, 31%, 500px);
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    img{
+        order: -1;
+    }
+    h5{
+        font-size: 1.15em;
+        font-weight: 700;
+    }
+    p{
+        font-size: .85em;
+        font-weight: 300;
+        font-style: italic;
+    }
+    a{
+        color: #01a884;
+        font-size: .85em;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 768px){
+    #Conferencistas{ 
+        article{
+        }
+        >img{
+            width: 50%;
+            bottom: -15%;
+            opacity: .5;
+        }
+    }
+    .card-speaker{
+        width: 48%;
+        img{
+            justify-self: end;
+
+        }
+    }
+}
+@media screen and (max-width: 550px){
+    .card-speaker{
+        width: 100%;
+    }
+    #Conferencistas{
+        article{
+            margin: 30px auto 150px;
+        }
+        >img{
+            bottom: -8%;
+        }
+    }
+}
+</style>

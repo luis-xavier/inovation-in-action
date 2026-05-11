@@ -8,6 +8,7 @@ import Form from '../layouts/formulario.astro';
 import NavBar from '../components/Navbar.astro';
 import Sponsors from '../layouts/sponsors.astro';
 import Faq from '../layouts/faq.astro';
+import Speakers from '../layouts/speakers.astro';
 
 import imgIglesia from '../assets/iglesia-fondo.jpg';
 import imgRibbonPictures from '../assets/ribbon-photos.png';
@@ -22,9 +23,6 @@ import imgPianoBarM from '../assets/venue-lenin-piano-bar-m.jpg';
 import imgMugy from '../assets/venue-mugy.png';
 import imgMugyM from '../assets/venue-mugy-m.jpg';
 import LogoCommscope from '../assets/logo-commscope.svg';
-import imgRibbonVector from '../assets/ribbon-color.png';
-import imgRibbbonVectorM  from '../assets/ribbon-color-m.png';
-import imgPedroAlatorre from '../assets/speaker-pedro-alatorre.png';
 import NumberOne from '../assets/punto-1.svg';
 import NumberTwo from '../assets/punto-2.svg';
 import NumberThree from '../assets/punto-3.svg';
@@ -244,25 +242,7 @@ import imgHandsM from '../assets/img-reasons-m.jpg';
 
 <Gradient />
 
-<section id="Conferencistas">
-	<div class="mt-8 md:ml-8 ml-4">
-		<Title title="CONFERENCISTAS" />
-	</div>
-	<div class="flex justify-between items-center md:flex-row flex-col gap-4">
-
-		<div class="flex items-center justify-between gap-6 mx-[24px]">
-			<div class="md:pl-12">
-				<h5 class="text-2xl font-bold mb-2">Pedro Alatorre</h5>
-				<p class="text-xs italic font-light">Director de Ventas</p>
-				<p class="text-xs italic font-light">Commscope México</p>
-			</div>
-			<Image src={imgPedroAlatorre} alt="" class="block md:w-auto w-[160px]"/>
-		</div>
-
-		<Image src={imgRibbonVector} alt="" class="md:block hidden w-sm" />
-		<Image src={imgRibbbonVectorM} alt="" class="md:hidden block w-[85%] self-end" />
-	</div>
-</section>
+<Speakers />
 
 <Gradient />
 
