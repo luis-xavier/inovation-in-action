@@ -10,6 +10,8 @@ import imgFedeVillegas from '../assets/speaker-federico-villegas.png';
 import imgJuanJose from '../assets/speaker-juan-jose-gomez.png';
 import imgMarioLopez from '../assets/speaker-juan-jose-gomez.png';
 import imgOscarMorales from '../assets/speaker-oscar-charofil.png';
+import imgRebecaCuriel from '../assets/speaker-rebeca-curiel.png';
+import imgFernandoGranados from '../assets/speaker-fernando-granados.png';
 ---
 <section id="Conferencistas">
 	<div class="mt-8 md:ml-8 ml-4">
@@ -79,6 +81,24 @@ import imgOscarMorales from '../assets/speaker-oscar-charofil.png';
                 </div>
                 <Image src={imgOscarMorales} alt="" class="block md:w-auto w-[160px]"/>
             </div>
+            <div class="card-speaker">
+                <div >
+                    <h5>Rebeca Curiel</h5>
+                    <p >Regional Sales Manager, Mx North</p>
+                    <p >Axis</p>
+                    <a href="https://www.linkedin.com/in/rebeca-c-curiel-niehus-7599b772/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgRebecaCuriel} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
+            <div class="card-speaker">
+                <div >
+                    <h5>Fernando Granados</h5>
+                    <p >Regional Sales Manager, Mx South East</p>
+                    <p >Axis</p>
+                    <a href=" https://www.linkedin.com/in/fergranados1223/" target="_blank">Ver perfil de Linkedin</a>
+                </div>
+                <Image src={imgFernandoGranados} alt="" class="block md:w-auto w-[160px]"/>
+            </div>
         </article>
 
 		<Image src={imgRibbonVector} alt="" class="md:block hidden w-sm" />
@@ -100,9 +120,9 @@ import imgOscarMorales from '../assets/speaker-oscar-charofil.png';
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        column-gap: 2%;
+        column-gap: 3%;
         row-gap: 3em;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin: 40px auto 200px;
         width: clamp(90%, 94%, 1200px);
         max-width: 1200px;
