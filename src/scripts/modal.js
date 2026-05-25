@@ -56,3 +56,15 @@ document.addEventListener('keydown', (e) => {
         closeModal(currentModal);
     }
 });
+
+// Botón de cerrar (SVG)
+document.querySelectorAll('.aceptar').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const modal = btn.closest('.modal-overlay');
+        closeModal(modal);
+    });
+});
+
+/*const finalModal = document.getElementById('final');
+showModal(finalModal);*/

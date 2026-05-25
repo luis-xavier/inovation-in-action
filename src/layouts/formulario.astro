@@ -201,7 +201,7 @@ import Title from '../components/TitleInovation.astro';
 		</div>
 		<input type="text" value="sin_aprobar" name="estatus" class="hidden">
 
-		<button type="submit" id="enviarbtn">Enviar</button>
+		<!--button type="submit" id="enviarbtn">Enviar</button-->
 	</form>
 </section>
 
@@ -228,6 +228,7 @@ import Title from '../components/TitleInovation.astro';
 </div>
 <!-- FIN DE MODAL BOX -->
 
+<script src="../scripts/modal.js"></script>
 <script>
 const form = document.getElementById('registro');
 form.addEventListener('submit', async (e) => {
@@ -243,7 +244,7 @@ form.addEventListener('submit', async (e) => {
   const data = Object.fromEntries(formData.entries());
   //console.dir(data)
 
-  try {
+  /*try {
     const response = await fetch('https://innovationinaction.com.mx/registro.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -264,7 +265,7 @@ form.addEventListener('submit', async (e) => {
     } catch (err) {
       console.error(err);
       alert('No se pudo enviar el formulario.');
-    }
+    }*/
 });
 
 
